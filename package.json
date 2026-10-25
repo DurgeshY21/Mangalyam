@@ -1,12 +1,13 @@
 {
-  "name": "my-app",
+  "name": "make-my-marriage",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "dev": "next dev apps/web",
+    "build": "next build apps/web",
+    "start": "next start apps/web",
+    "lint": "eslint apps/web/src apps/web/next.config.ts",
+    "typecheck": "next typegen apps/web && tsc --project apps/web/tsconfig.json --noEmit"
   },
   "dependencies": {
     "next": "16.4.3",
