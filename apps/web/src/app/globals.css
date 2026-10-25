@@ -6,3 +6,13 @@
 @media(max-width:900px){.hero{gap:35px}.dashboard-shell{grid-template-columns:160px minmax(0,1fr);gap:25px}.stat-card{padding:16px}}
 @media(max-width:640px){.container{width:calc(100% - 36px)}.nav{min-height:76px;gap:12px}.brand{font-size:19px}.nav .button{font-size:11px;padding:9px 11px}.hero{grid-template-columns:1fr;padding-block:48px;gap:40px}.hero h1{letter-spacing:-1.5px}.hero-art{min-height:380px;max-width:400px;width:100%;margin-inline:auto}.feature-grid{grid-template-columns:1fr;gap:30px}.planning-section{padding-block:45px}.dashboard-shell{display:block}aside{border-right:0;border-bottom:1px solid var(--border);padding:22px 0 15px}aside>.eyebrow{display:none}.dashboard-nav{flex-direction:row;flex-wrap:wrap;gap:3px}.dashboard-nav a{font-size:12px;padding:9px}.dashboard-main{padding-top:30px}.dashboard-main h1{font-size:34px}.stats-grid{grid-template-columns:1fr}.section-heading h2{font-size:27px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Shared root layout */
+.app-shell { display: grid; grid-template-columns: 150px minmax(0, 1fr); flex: 1; }
+.app-shell > main { min-width: 0; }
+.app-sidebar { padding: 28px 18px; }
+.app-sidebar nav { display: flex; flex-direction: column; gap: 18px; font-size: 13px; }
+.auth-links { display: flex; align-items: center; gap: 20px; font-size: 13px; }
+.auth-placeholder { padding-block: 64px; }
+@media (max-width: 900px) { .hero { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .app-shell { display: flex; flex-direction: column; } .app-sidebar nav { flex-direction: row; } .auth-links { gap: 12px; } }

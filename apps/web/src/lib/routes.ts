@@ -1,1 +1,1 @@
-export const routes = {home: "/", dashboard: "/dashboard"} as const;
+export const routes = { home: "/", login: "/auth/login", signup: "/auth/signup" } as const;

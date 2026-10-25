@@ -1,37 +1,19 @@
 # Make My Marriage
 
-Wedding planning for families and professional planners.
+Frontend-only Next.js project. Backend services will live in a separate repository.
 
-## Run locally
-From the repository root: npm install, then npm run dev. Open http://localhost:3000.
+## Current structure
+apps/web/src/app/layout.tsx composes Navbar, Sidebar, page children and Footer.
 
-- /: homepage
-- /dashboard: wedding dashboard preview
-- npm run lint: ESLint
-- npm run typecheck: route generation and TypeScript
-- npm run build: production web build
-- npm start: production web server after build
+- app/page.tsx: serves the homepage at /
+- app/Home/Homepage.tsx: homepage component
+- app/auth/login/page.tsx: /auth/login placeholder
+- app/auth/signup/page.tsx: /auth/signup placeholder
+- components/Navbar.tsx, Footer.tsx, Sidebar.tsx: shared layout pieces
+- components/ui: small reusable UI components
+- lib/routes.ts: route names
 
-## Folder structure
-apps/web/src/app/              Next.js pages and layouts
-  (marketing)/                Homepage with shared navigation and footer
-  (family)/dashboard/         Wedding dashboard with its own shell
-apps/web/src/features/        Feature-specific content and logic
-apps/web/src/components/      navigation, footer, layout and reusable ui
-apps/web/src/lib/             Shared frontend utilities and routes
-apps/web/src/services/        Future typed Express API clients
-apps/web/public/              Static assets
-apps/api/src/                 Reserved Express modular monolith
-packages/contracts/           Reserved Zod schemas and transport types
-infra/                        Deployment documentation and runbooks
-tests/                        Integration and end-to-end tests
+No marketing/family route groups or active dashboard. Login and signup have no authentication implementation yet. Home is a component folder; the root page renders it without adding /Home to the URL.
 
-Future routes: (auth), (planner), guest/[token], w/[slug]. Add page files only when their flows are implemented.
-
-## Current scope
-Responsive homepage, reusable navigation/footer, and wedding dashboard UI foundation. The dashboard is public preview content, with no real private data. Authentication, APIs, database persistence and wedding creation are not implemented.
-
-The root package.json owns installed dependencies and commands. Independent API/contracts package manifests will be introduced when their runtime code is implemented. The root remains the command entry point; no my-app wrapper is needed.
-
-## Approved architecture
-Next.js + TypeScript web app, independent Node.js/Express + TypeScript modular monolith, MongoDB Atlas + Mongoose, shared Zod contracts. Custom Argon2id/opaque-session authentication. Private GCS storage, Google Places API (New), YouTube embeds and Resend integrations.
+## Commands
+Run from the repository root: npm run dev, npm run lint, npm run typecheck, npm run build.
