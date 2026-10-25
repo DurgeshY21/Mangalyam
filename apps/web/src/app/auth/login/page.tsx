@@ -1,3 +1,8 @@
+import type { Metadata } from "next";
+import { SignIn } from "./SignIn";
+
+export const metadata: Metadata = { title: "Sign In" };
+
 export default function LoginPage() {
-  return <section className="container auth-placeholder"><h1>Login</h1><p className="muted">Login page structure. The form will be added when we build authentication.</p></section>;
+  return <SignIn />;
 }

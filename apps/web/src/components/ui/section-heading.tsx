@@ -1,1 +1,1 @@
-export function SectionHeading({title, description}: {title: string; description?: string}) {return <div className="section-heading"><h2>{title}</h2>{description && <p className="muted">{description}</p>}</div>;}
+export function SectionHeading({title, description}: {title: string; description?: string}) {return <div><h2 className="mb-4 font-display text-[30px] leading-tight">{title}</h2>{description && <p className="leading-[1.7] text-[#756b64]">{description}</p>}</div>;}
