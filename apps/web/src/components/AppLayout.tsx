@@ -9,7 +9,7 @@ import { Sidebar } from "./Sidebar";
 export function AppLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
-  if (pathname === routes.login) {
+  if (pathname === routes.login || pathname === routes.signup) {
     return <main id="main-content" className="flex min-w-0 flex-1 flex-col">{children}</main>;
   }
 
