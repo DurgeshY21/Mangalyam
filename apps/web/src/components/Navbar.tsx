@@ -13,8 +13,7 @@ const navigation = [
   { label: "Features", href: "/#shared-workspace" },
   { label: "Events", href: "/#ceremonies" },
   { label: "Planners", href: "/#pricing" },
-  // Dashboard entry goes through sign-in until the workspace is implemented.
-  { label: "Dashboard", href: routes.login },
+  { label: "Dashboard", href: routes.dashboard },
 ] as const;
 
 const planningButton = "inline-flex h-10 items-center justify-center gap-2 rounded-full border border-plum bg-plum px-5 text-xs leading-none font-semibold tracking-[0.15px] whitespace-nowrap text-[#fff8ef] shadow-[0_3px_10px_#43173915] transition-[background,box-shadow] duration-200 hover:bg-[#59254f] hover:shadow-[0_4px_14px_#43173925] motion-reduce:transition-none";
